@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style type="text/css">
+        /* 全局样式 - 核心：强制自动换行 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            word-wrap: break-word !important; /* 强制换行，优先级别最高 */
+            word-break: break-all !important; /* 长单词/链接强制拆分换行 */
+        }
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        /* 标题样式 */
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+            margin: 15px 0 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        /* 段落样式 */
+        p {
+            margin: 10px 0;
+        }
+        /* 链接样式 */
+        a {
+            color: #2196F3;
+            text-decoration: underline;
+        }
+        /* 表格样式 - 权限和SDK专用 */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0 20px;
+            background-color: white;
+            border: 1px solid #eee;
+        }
+        .info-table th {
+            background-color: #f0f0f0;
+            color: #555;
+            font-weight: bold;
+            padding: 8px 10px;
+            text-align: left;
+            border: 1px solid #eee;
+            font-size: 13px;
+        }
+        .info-table td {
+            padding: 8px 10px;
+            border: 1px solid #eee;
+            vertical-align: top;
+        }
+        /* 去除滚动条样式干扰 */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* SDK表格标题行背景色区分 */
+        .sdk-header {
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <p>欢迎使用本游戏，在使用本游戏前，请您充分阅读并理解<a href="">《用户协议》</a>和<a href="">《隐私政策》</a>各条款，了解我们对于个人信息的处理规则和权限申请的目的，特别提醒您注意前述协议中关于我们免除自身责任、限制您的权力的相关条款及争议解决方式、司法管辖等内容。我们将严格遵守相关法律法规和隐私政策以保护您的个人隐私。</p>
+    <p>为确保您的游戏体验，我们会向您申请以下必要权限，您同意后方可进入本游戏，拒绝可能会导致无法进入本游戏。同时，我们会根据本游戏中相关功能的具体需要向您申请非必要的权限，您可选择同意或者拒绝，拒绝可能会导致部分游戏体验异常。</p>
+
+    <!-- 权限信息表格 -->
+    <div class="title">必要权限说明</div>
+    <table class="info-table">
+        <tr>
+            <th>权限类型</th>
+            <th>用途说明</th>
+        </tr>
+        <tr>
+            <td>设备权限(必要)</td>
+            <td>读取唯一设备标识 (AndroidID、mac)，用于生成帐号、保存和恢复游戏数据，识别异常情况以及保障网络及运营安全。</td>
+        </tr>
+        <tr>
+            <td>存储权限(必要)</td>
+            <td>访问您的存储空间，以便使您可以下载并保存内容、图片存储及上传、个人设置信息缓存读写、系统及日志文件创建。</td>
+        </tr>
+    </table>
+
+    <!-- 第三方SDK表格 -->
+    <div class="title">第三方SDK信息</div>
+    <table class="info-table">
+        <tr class="sdk-header">
+            <th>SDK名称</th>
+            <th>详情信息</th>
+        </tr>
+        <tr>
+            <td>SDK</td>
+            <td>
+                隐私政策
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
